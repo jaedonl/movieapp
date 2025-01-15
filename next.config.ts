@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'youtube.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ik.imagekit.io',
+        port: ''
       }
     ]
   }

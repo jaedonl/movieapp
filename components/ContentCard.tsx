@@ -9,6 +9,7 @@ const ContentCard = ({
     id,
     title,
     genre,
+    views,
     cover,
     isSubscribed = false
 }: Content) => {
@@ -24,7 +25,7 @@ const ContentCard = ({
                     // 'xs:max-w-40 max-w-28'
                     )}>
                     <p className='content-title'>{title}</p>
-                    <p className='content-genre'>{genre}</p>
+                    <p className='content-genre'>{genre} - <span>{views.toLocaleString()} views</span></p>
                 </div>
 
                 {isSubscribed && (

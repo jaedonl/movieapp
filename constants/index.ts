@@ -43,16 +43,18 @@ export const navigationLinks = [
   export const FIELD_NAMES = {
     fullName: "Full name",
     email: "Email",
-    universityId: "University ID Number",
+    age: "Age",
+    avatar: "Avatar",
     password: "Password",
-    universityCard: "Upload University ID Card",
+    confirmPassword: "Confirm password",
   };
   
   export const FIELD_TYPES = {
     fullName: "text",
     email: "email",
-    universityId: "number",
+    age: "number",
     password: "password",
+    confirmPassword: "password",
   };
   
   export const sampleContents = [

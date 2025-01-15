@@ -9,3 +9,11 @@ interface Content {
     cover: string;
     isSubscribed?: boolean;
 }
+
+interface AuthCredentials {
+    fullName: string;
+    email: string;
+    password: string;
+    age: number;
+    universityCard: string;
+}

@@ -35,7 +35,7 @@ const ContentOverview = ({
 
           <div className="total-views">
             <p>
-              Total Views <span>{views.toLocaleString()}</span>
+              <span>{views.toLocaleString()}</span> views
             </p>
           </div>
 
