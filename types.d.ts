@@ -15,5 +15,5 @@ interface AuthCredentials {
     email: string;
     password: string;
     age: number;
-    universityCard: string;
+    avatar: string;
 }
