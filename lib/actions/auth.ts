@@ -5,6 +5,7 @@ import { eq } from "drizzle-orm";
 import { users } from "@/database/schema";
 import { hash } from "bcryptjs";
 import { signIn } from "@/auth";
+import { redirect } from "next/navigation";
 
 export const signInWithCredentials = async (params: Pick<AuthCredentials, "email" | "password">) => {
     const { email, password } = params;
@@ -30,7 +31,8 @@ export const signInWithCredentials = async (params: Pick<AuthCredentials, "email
 }
 
 export const signUp = async (params: AuthCredentials) => {
-    const { fullName, email, password, avatar } = params;
+    const { fullName, email, age, password, avatar } = params;
+
 
     const existingUser = await db.select().from(users).where(eq(users.email, email.toString())).limit(1);
 
@@ -44,6 +46,7 @@ export const signUp = async (params: AuthCredentials) => {
         await db.insert(users).values({
             fullName,
             email,
+            age,
             password: hashedPassword,
             avatar
         })

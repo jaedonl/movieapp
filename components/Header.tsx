@@ -2,10 +2,13 @@
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { cn } from '@/lib/utils'
+import { cn, getInitials } from '@/lib/utils'
 import Image from 'next/image'
+// import { Avatar, AvatarImage, AvatarFallback } from '@radix-ui/react-avatar'
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Session } from 'next-auth'
 
-const Header = () => {
+const Header = ({session}: {session: Session}) => {
   const pathname = usePathname()
   
   return (
@@ -21,6 +24,21 @@ const Header = () => {
           )}>
             Library
           </Link>
+        </li>
+        <li>
+          {session 
+            ? <Link href='/my-profile'>
+                <Avatar>
+                  {/* <AvatarImage src='https://github.com/shadcn.png' /> */}
+                  <AvatarFallback className='bg-amber-100'>
+                    {getInitials(session?.user?.name || "Guest User")}
+                  </AvatarFallback>
+                </Avatar>
+              </Link>
+
+            : <Link href='/signin' className='text-base cursor-pointer capitalize text-light-100'>Sign in</Link>
+          }
+          
         </li>
       </ul>
     </header>

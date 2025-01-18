@@ -50,6 +50,8 @@ const AuthForm = <T extends FieldValues> ({type, schema, defaultValues, onSubmit
         }
     }
 
+    console.log(form)
+
     return (
         <div className='flex flex-col gap-4'>
             <h1 className='text-2xl font-semibold text-white'>
@@ -77,7 +79,6 @@ const AuthForm = <T extends FieldValues> ({type, schema, defaultValues, onSubmit
                                             ? (<ImageUpload onFileChange={field.onChange} />) 
                                             : (<Input 
                                                 required 
-                                                placeholder={field.name}
                                                 type={FIELD_TYPES[field.name as keyof typeof FIELD_TYPES]} 
                                                 {...field} 
                                                 className='form-input' />)

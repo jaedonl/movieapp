@@ -6,6 +6,7 @@ CREATE TABLE "users" (
 	"full_name" varchar(255) NOT NULL,
 	"email" text NOT NULL,
 	"password" text NOT NULL,
+	"age" integer NOT NULL,
 	"avatar" text,
 	"status" "status" DEFAULT 'PENDING',
 	"role" "role" DEFAULT 'USER',
