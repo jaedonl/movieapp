@@ -36,7 +36,7 @@ const Header = ({session}: {session: Session}) => {
                 </Avatar>
               </Link>
 
-            : <Link href='/signin' className='text-base cursor-pointer capitalize text-light-100'>Sign in</Link>
+            : <Link href='/signin' className='text-base cursor-pointer text-light-100'>Sign in</Link>
           }
           
         </li>

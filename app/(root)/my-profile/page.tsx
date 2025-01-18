@@ -8,12 +8,11 @@ import { redirect } from 'next/navigation'
 const page = async () => {
     const session = await auth()
     if (!session) redirect('/signin')
-        
+
     return (
         <>
             <form className='mb-10' action={async () => {
                 'use server';
-
                 await signOut()            
             }}>
                 <Button>Logout</Button>
