@@ -12,7 +12,7 @@ export const navigationLinks = [
     },
   ];
   
-  export const adminSideBarLinks = [
+export const adminSideBarLinks = [
     {
       img: "/icons/admin/home.svg",
       route: "/admin",
@@ -24,40 +24,40 @@ export const navigationLinks = [
       text: "All Users",
     },
     {
-      img: "/icons/admin/book.svg",
-      route: "/admin/books",
-      text: "All Books",
+      img: "/icons/admin/video_library.svg",
+      route: "/admin/contents",
+      text: "All Contents",
     },
     {
-      img: "/icons/admin/bookmark.svg",
-      route: "/admin/book-requests",
-      text: "Borrow Requests",
+      img: "/icons/admin/card_membership.svg",
+      route: "/admin/membership-requests",
+      text: "Membership Requests",
     },
     {
-      img: "/icons/admin/user.svg",
+      img: "/icons/admin/manage_account.svg",
       route: "/admin/account-requests",
       text: "Account Requests",
     },
   ];
   
-  export const FIELD_NAMES = {
+export const FIELD_NAMES = {
     fullName: "Full name",
     email: "Email",
     age: "Age",
     avatar: "Avatar",
     password: "Password",
     confirmPassword: "Confirm password",
-  };
+};
   
-  export const FIELD_TYPES = {
+export const FIELD_TYPES = {
     fullName: "text",
     email: "email",
     age: "number",
     password: "password",
     confirmPassword: "password",
-  };
+};
   
-  export const sampleContents = [
+export const sampleContents = [
     {
       id: 1,
       title: "처절한 블라인드 소개팅 데이트",
@@ -218,4 +218,4 @@ export const navigationLinks = [
       summary:
         "전 세계 어디보다도 가장 화려하고 멋진 도시였던 뉴욕시티, 하지만 더 이상 그렇지 않다. 너무나도 심각한 마약 문제로 인해, 지금은 사상 최악의 치안 상태를 경험하고 있다. 더 심해지기 전에 무언가 조치가 필요하다!",
     },
-  ];
+];
