@@ -19,8 +19,9 @@ export const contentSchema = z.object({
     description: z.string().trim().min(10).max(1000),
     author: z.string().trim().min(2).max(100),
     genre: z.string().trim().min(2).max(50),
-    rating: z.coerce.number().min(1).max(5),
-    coverUrl: z.string().nonempty(),
     videoUrl: z.string().nonempty(),
+    coverUrl: z.string().nonempty(),
+    ageLimit: z.string().nonempty(),
+    memberOnly: z.string().nonempty(),
     summary: z.string().trim().min(10),
 })
